@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>Link to </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/materialize.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <%- include('../components/navbar2'); -%>
+
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>From </th>
+                            <th>To</th>
+                            <th>Info</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i=0; i<data.length; i++) {%>
+                            <tr>
+                                <td>
+                                    <%= data[i].id %>
+                                </td>
+                                <td>
+                                    <a href="<%= data[i].lfrom %>">
+                                        <%= data[i].lfrom %>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="<%= host %>/t/<%= data[i].lto %>">
+                                        <%= host+"/t/"+data[i].lto %>
+                                    </a>
+                                </td>
+                                <td> <a href="/user/detale/<%= data[i].id %>">
+                        Info
+                        </a></td>
+                            </tr>
+                            <% }%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- <%- include('../components/footer'); -%> -->
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="/js/materialize.js"></script>
+        <script src="/js/init.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>Link to </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/materialize.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <%- include('../components/navbar2'); -%>
+
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+                <div class="row">
+                    <br><br><br>
+                    <form class="col s12" action="/user/url">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input name="url" placeholder="You Url " id="url" type="url" class="validate">
+                                <label for="password">Url </label>
+                            </div>
+                        </div>
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                         </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- <%- include('../components/footer'); -%> -->
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="/js/materialize.js"></script>
+        <script src="/js/init.js"></script>
+
+</body>
+
+</html>

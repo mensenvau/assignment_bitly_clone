@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>Link to </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/materialize.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <%- include('../components/navbar2'); -%>
+
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+                <div class="col s12 m7">
+                    <h2 class="header">Link haqida (
+                        <%= data.id %>)</h2>
+                    <div class="card horizontal">
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p>From Link :
+                                    <a href="<%= data.lfrom %>">
+                                        <%= data.lfrom %>
+                                    </a>
+                                </p>
+                                <p>To Link :
+                                    <a href="<%= host %>/t/<%= data.lto %>">
+                                        <%= host+"/t/"+data.lto %>
+                                    </a>
+                                </p>
+                                <p>Data :
+                                    <%= data.date %>
+                                </p>
+                                <p>Click :
+                                    <%= data.click %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <%- include('../components/footer'); -%> -->
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="/js/materialize.js"></script>
+        <script src="/js/init.js"></script>
+
+</body>
+
+</html>
